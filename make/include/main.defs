@@ -53,7 +53,6 @@ ifneq (,$(filter $(BUILD.system),darwin cygwin mingw))
     MODULES += contrib/libtheora
     MODULES += contrib/libsamplerate
     MODULES += contrib/lame
-    MODULES += contrib/x264
     MODULES += contrib/jansson
 endif
 
@@ -82,6 +81,8 @@ endif
 ifeq (1,$(FEATURE.qsv))
     MODULES += contrib/libmfx
 endif
+
+MODULES += contrib/x264
 
 ifneq (,$(filter $(BUILD.system),cygwin mingw))
 ifneq ($(HAS.iconv),1)
