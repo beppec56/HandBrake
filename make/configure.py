@@ -814,7 +814,7 @@ class Project( Action ):
             self.title = '%s %s (%s)' % (self.name,self.version,self.build)
         else:
             if repo.branch != '':
-                self.version = '%d.%d.%d-%d-%s-%s' % (self.vmajor, self.vminor,
+                self.version = '%d.%d.%d-%d-%s-%s (x264-r2601-a0cd7d3)' % (self.vmajor, self.vminor,
                     self.vpoint, repo.rev, repo.shorthash, repo.branch)
             else:
                 self.version = '%d.%d.%d-%d-%s' % (self.vmajor, self.vminor,
