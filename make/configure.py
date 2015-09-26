@@ -814,15 +814,15 @@ class Project( Action ):
             self.title = '%s %s (%s)' % (self.name,self.version,self.build)
         else:
             if repo.branch != '':
-                self.version = '%d.%d.%d-%d-%s-%s' % (self.vmajor, self.vminor,
+                self.version = '%d.%d.%d-%d-%s-%s (x264-r2397-aff928d)' % (self.vmajor, self.vminor,
                     self.vpoint, repo.rev, repo.shorthash, repo.branch)
             else:
-                self.version = '%d.%d.%d-%d-%s' % (self.vmajor, self.vminor,
+                self.version = '%d.%d.%d-%d-%s (x264-r2397-aff928d)' % (self.vmajor, self.vminor,
                     self.vpoint, repo.rev, repo.shorthash)
             url_ctype = '_unstable'
             url_ntype = 'unstable'
             self.build = time.strftime('%Y%m%d') + '01'
-            self.title = '%s %s (%s)' % (self.name,self.version,self.build)
+            self.title = '%s %s (%s) (x264-r2397-aff928d)' % (self.name,self.version,self.build)
 
         self.url_appcast = 'http://handbrake.fr/appcast%s%s.xml' % (url_ctype,url_arch)
         self.url_appnote = 'http://handbrake.fr/appcast/%s.html' % (url_ntype)
