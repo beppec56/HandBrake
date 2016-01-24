@@ -839,12 +839,12 @@ class Project( Action ):
             self.version = repo.date.strftime("%Y%m%d%H%M%S")
             self.version += '-%s' % (repo.shorthash)
             if repo.branch != '':
-                self.version += '-%s' % (repo.branch)
+                self.version += '-%s (x264-r2668-fd2c324)' % (repo.branch)
 
             self.debversion = repo.date.strftime("%Y%m%d%H%M%S")
-            self.debversion += '-%s' % (repo.shorthash)
+            self.debversion += '-%s (x264-r2668-fd2c324)' % (repo.shorthash)
             if repo.branch != '':
-                self.debversion += '-%s' % (repo.branch)
+                self.debversion += '-%s (x264-r2668-fd2c324)' % (repo.branch)
 
             url_ctype = '_unstable'
             url_ntype = 'unstable'
